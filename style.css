@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #0f001a, #000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Efek transisi */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.fade.show {
+  opacity: 1;
+}
+
+.hidden { display: none; }
+
+/* INTRO */
+.intro {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2d004d, #000);
+  z-index: 999;
+  flex-direction: column;
+  text-align: center;
+}
+
+.intro.hide {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+#typing {
+  font-size: 1.6rem;
+  color: #b472ff;
+  text-shadow: 0 0 15px #b472ff;
+  margin-bottom: 1.5rem;
+  min-height: 50px;
+}
+
+#masukBtn {
+  background: transparent;
+  border: 2px solid #b472ff;
+  color: #b472ff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+#masukBtn:hover {
+  background: #b472ff;
+  color: #fff;
+  box-shadow: 0 0 20px #b472ff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.glow {
+  font-size: 2rem;
+  color: #b472ff;
+  text-shadow: 0 0 15px #b472ff, 0 0 40px #b472ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #b472ff; }
+  to { text-shadow: 0 0 25px #d3a4ff; }
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #eee;
+}
+
+.photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid #b472ff;
+  box-shadow: 0 0 30px #b472ff;
+  margin: 20px auto;
+  display: block;
+}
+
+.btn-group {
+  margin-top: 25px;
+}
+.btn-group button {
+  background: transparent;
+  border: 2px solid #b472ff;
+  color: #b472ff;
+  margin: 10px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-group button:hover {
+  background: #b472ff;
+  color: white;
+  box-shadow: 0 0 20px #b472ff;
+}
+
+/* SURPRISE */
+.surprise {
+  text-align: center;
+  margin-top: 60px;
+}
+.typing2 {
+  color: #fff;
+  font-size: 1.1rem;
+  text-shadow: 0 0 15px #b472ff;
+  margin-top: 15px;
+}
+
+/* GALERI */
+.gallery {
+  text-align: center;
+  margin: 60px auto;
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+.photos img {
+  width: 200px;
+  border-radius: 15px;
+  border: 3px solid #b472ff;
+  box-shadow: 0 0 25px #b472ff;
+  transition: transform 0.3s ease;
+}
+.photos img:hover {
+  transform: scale(1.05);
+}
+.backBtn {
+  background: transparent;
+  border: 2px solid #b472ff;
+  color: #b472ff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.backBtn:hover {
+  background: #b472ff;
+  color: #fff;
+  box-shadow: 0 0 20px #b472ff;
+}
+
+/* SURAT */
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background: rgba(20, 0, 35, 0.9);
+  border: 2px solid #b472ff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 40px #b472ff;
+  max-width: 400px;
+  text-align: center;
+}
+.card h3 {
+  color: #b472ff;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fade.show {
+  opacity: 1;
+}
+/* Pesan Rahasia Overlay */
+.secret-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 0, 30, 0.9); /* efek gelap transparan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.secret-overlay.show {
+  opacity: 1;
+}
+
+/* Kotak pesan */
+.secret-box {
+  background: transparent;
+  padding: 40px;
+  border: 2px solid #c77dff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #b5179e, 0 0 60px #7209b7;
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Teks efek neon ungu */
+.secret-box p {
+  color: #e0aaff;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px #c77dff, 0 0 20px #9d4edd, 0 0 40px #7b2cbf;
+}
+
+/* Animasi masuk lembut */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tombol close (opsional) */
+.secret-box::after {
+  content: "×";
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
